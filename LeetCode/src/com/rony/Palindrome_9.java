@@ -5,7 +5,6 @@ public class Palindrome_9 {
         Palindrome_9 p = new Palindrome_9();
         Palindrome_9.Solution sol = p.new Solution();
         System.out.println(sol.isPalindrome(-12321));
-
     }
     class Solution {
         public boolean isPalindrome(int x) {
