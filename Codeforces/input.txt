@@ -1,7 +1,2 @@
-6
-cbabc
-ab
-zza
-ba
-a
-nutforajaroftuna
+11
+5 5 5 5 5 5 5 5 0 5 5
