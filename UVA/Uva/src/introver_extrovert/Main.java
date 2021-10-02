@@ -19,7 +19,7 @@ public class Main {
         char c [] = str.toCharArray();
         for(char cr : c){
             if(cr == '0'){
-                System.out.print();
+                System.out.println();
             }else{
 
             }

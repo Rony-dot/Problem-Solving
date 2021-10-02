@@ -54,8 +54,9 @@ void dijkastra(int source){
     }
 }
 int main(){
-    reset();
     file_read("");
+    reset();
+
     int nodes, edges;
     cin>>nodes>>edges;
     for(int i=1;i<=edges;i++){
@@ -73,13 +74,3 @@ int main(){
             else cout<<dist[i]<<endl;
     }
 }
-/*
-5 6
-1 2 2
-1 3 1
-1 4 3
-2 3 1
-4 5 2
-5 3 5
-1
-*/

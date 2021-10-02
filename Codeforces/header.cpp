@@ -12,6 +12,68 @@
 #include<ctime>
 using namespace std;
 
+#define sn sf ("%d",&n)
+#define sf scanf
+#define pf printf
+#define ssf sscanf
+#define spf sprintf
+#define fsf fscanf
+#define fpf fprintf
+#define fast ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0)
+#define scase sf ("%d",&tc)
+#define sn sf ("%d",&n)
+#define whilecase while (tc--)
+#define eof while (cin >> n)
+#define forloop for (pos=1; pos<=tc; pos++)
+#define arrayloop (i=0; i<n; i++)
+#define cinstr cin >> str
+#define getstr getline (cin,str)
+#define pcase pf ("Case %d: ",pos)
+#define vi vector <int>
+#define pii pair <int,int>
+#define mii map <int,int>
+#define pb push_back
+#define in insert
+#define llu unsigned long long
+#define lld long long
+#define U unsigned int
+#define endl "\n"
+
+const int MOD = 1000000007;
+const int MAX = 1000005;
+
+int SetBit (int n, int x) { return n | (1 << x); }
+int ClearBit (int n, int x) { return n & ~(1 << x); }
+int ToggleBit (int n, int x) { return n ^ (1 << x); }
+bool CheckBit (int n, int x) { return (bool)(n & (1 << x)); }
+
+
+typedef long long LL;
+typedef long double LD;
+#define fi first
+#define se second
+#define pb push_back
+#define mp make_pair
+typedef pair<int,int> PII;
+
+const double PI = acos(-1.0);
+const double eps = 1e-6;
+const LL mod = 1e9+7;
+const int INF = 0x3f3f3f3f;
+const int maxn = 1e5+10;
+const int maxm = 100+10;
+
+
+#define file_read(filename)  freopen("input.txt","r",stdin);
+#define file_write(filename)  freopen("output.txt","w",stdout);
+
+//#define ios ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+
+作者：坠落的余晖
+链接：https://www.acwing.com/solution/content/68285/
+来源：AcWing
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 #define For(i,n) for(int i=1;i<=n;i++)
 #define Fork(i,k,n) for(int i=k;i<=n;i++)
 #define Rep(i,n) for(int i=0;i<n;i++)
