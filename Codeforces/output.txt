@@ -1,4 +1,2 @@
-0 is visited
-1 is visited
-2 is visited
-3 is visited
+5 2
+3 1 2 1 3

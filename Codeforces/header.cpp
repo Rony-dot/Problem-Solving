@@ -1,3 +1,7 @@
+#define file_read(filename)  freopen("input.txt","r",stdin)
+#define ll long long
+#define llu unsigned long long
+
 
 #include<bits/stdc++.h>
 #include<stdio.h>
