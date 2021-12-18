@@ -6,14 +6,28 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.myPow(2.00000,-2147483648));
+        solution.reverseString(new char[]{'h','e','l','l','o'});
     }
 }
 
 class Solution {
+    public void reverseString(char[] s) {
+        /**
+         * reverseString = leetcode 344
+         */
+        int left = 0;
+        int right = s.length - 1;
+        while(left < right){
+            char temp = s[left];
+            s[left] = s[right];
+            s[right] = temp;
+            left++;
+            right--;
+        }
+    }
     public double myPow(double x, int n) {
         /**
-         * pow(X,N)
+         * pow(X,N) = leetcode 50
          */
         double ans = 1.0;
         long num = n;
@@ -36,7 +50,7 @@ class Solution {
     }
     public int trailingZeroes(int n) {
         /**
-         * Factorial Trailing Zeroes
+         * Factorial Trailing Zeroes = leetcode 172
          *  counting the number of 5's in the number
          */
         int count = 0;
@@ -48,7 +62,7 @@ class Solution {
     }
     public List<String> fizzBuzz(int n) {
         /**
-         * fizz buzz
+         * fizz buzz = leetcode 412
          */
         List<String> result = new ArrayList<>();
         for(int i=1; i<=n; i++){
