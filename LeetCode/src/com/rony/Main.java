@@ -11,6 +11,33 @@ public class Main {
 }
 
 class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        /**
+         * leetcode 14
+         */
+        String result = "";
+        if(strs.length == 0 || strs == null){
+            return result;
+        }
+
+        int minLen = strs[0].length();
+        for(String s: strs){
+            minLen = Math.min(minLen,s.length());
+        }
+
+        for(int i =0; i<minLen; i++){
+            char cur = strs[0].charAt(i);
+            for(String s: strs){
+                if(cur != s.charAt(i)){
+                    return result;
+                }
+            }
+            result+=cur;
+        }
+
+        return result;
+    }
+}
     public void reverseString(char[] s) {
         /**
          * reverseString = leetcode 344
