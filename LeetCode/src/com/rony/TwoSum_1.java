@@ -18,12 +18,12 @@ public class TwoSum_1 {
 
         int[] nums = {2,7,11, 15};
         int target = 26;
-        Solution s = new Solution();
+        MySolution s = new MySolution();
         int[] results = s.twoSum(nums, target);
         System.out.println(results[0]+" , "+results[1]);
     }
 }
-class Solution {
+class MySolution {
     public int[] twoSum(int[] nums, int target) {
 
         int[] results = new int[2];
@@ -38,4 +38,5 @@ class Solution {
         }
         return results;
     }
+
 }
