@@ -6,11 +6,34 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.fizzBuzz(5));
+        System.out.println(solution.myPow(2.00000,-2147483648));
     }
 }
 
 class Solution {
+    public double myPow(double x, int n) {
+        /**
+         * pow(X,N)
+         */
+        double ans = 1.0;
+        long num = n;
+        if(n<0){
+            num = -1 * num;
+        }
+        while(num>0){
+            if(num%2==0){
+                x = x * x;
+                num = num / 2;
+            }else {
+                ans = ans * x;
+                num = num - 1;
+            }
+        }
+        if(n < 0 ){
+            return (double) (1.0) / (double) ans;
+        }
+        return ans;
+    }
     public int trailingZeroes(int n) {
         /**
          * Factorial Trailing Zeroes
