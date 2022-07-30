@@ -22,6 +22,7 @@ void solve(){
  
 
 int main() {
+    // push from home
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
     int t;
