@@ -22,7 +22,7 @@ void solve(){
  
 
 int main() {
-    // push from home
+    // push from stage
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
     int t;
