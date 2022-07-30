@@ -5,7 +5,7 @@ using namespace std;
 #define llu unsigned long long
 int main()
 {
-//    file_read("");
+    file_read("");
     int n, k;
     cin>>n>>k;
     int arr[n], brr[105]={0};

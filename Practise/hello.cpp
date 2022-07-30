@@ -1,12 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    while(1){
-int a=2;
-int s;
-cin>>s;
-if(s==0) break;
-cout<<a<<" is Shifted "<<s<<" bits -> "<<(a>>s)<<endl;
-
-}
+    freopen("input.txt","r",stdin);
+    freopen("output.txt","w",stdout);
+    int x, y;
+    scanf("%d",&x);
+    scanf("%d",&y);
+    printf("sum of %d and %d is: %d",x,y,x+y);
 }

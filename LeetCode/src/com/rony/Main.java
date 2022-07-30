@@ -6,11 +6,71 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        solution.reverseString(new char[]{'h','e','l','l','o'});
+        System.out.println(solution.reverseWords("the hi      is blue"));
     }
 }
 
 class Solution {
+    public String longestPalindrome(String s) {
+        //5
+        // manacher's algorithm = linear time
+        return "";
+    }
+
+    public String reverseWords(String s) {
+        // 151
+        StringBuffer sb = new StringBuffer();
+
+        int i = s.length() - 1;
+
+        while (i >= 0) {
+            if (s.charAt(i) == ' ') {
+                i--;
+            } else {
+                int j = i;
+                while (i >= 0 && s.charAt(i) != ' ') {
+                    i--;
+                }
+                if (sb.length() > 0) {
+                    sb.append(' ');
+                }
+                for (int k = i + 1; k <= j; k++) {
+                    sb.append(s.charAt(k));
+                }
+            }
+        }
+
+        return sb.toString();
+    }
+    public String reverseWords2(String s) {
+        //151
+        int i = s.length()-1;
+        StringBuffer sb = new StringBuffer();
+        if(s.charAt(i) == ' '){
+            i--;
+        }
+            int j = i;
+            while(i>-1){
+                if(s.charAt(i)!=' ' && i!=0){
+                    i--;
+                }else {
+                    if(sb.length()>0){
+                        sb.append(' ');
+                    }
+                    while(s.charAt(i)==' '){
+                        i--;
+                    }
+                    i++;
+                    int k = s.charAt(i)==' ' ? i+1 : i;
+                    for(; k<=j; k++){
+                        sb.append(s.charAt(k));
+                    }
+                    i--;
+                    j = i;
+                }
+            }
+        return sb.toString();
+    }
     public String longestCommonPrefix(String[] strs) {
         /**
          * leetcode 14
@@ -37,7 +97,6 @@ class Solution {
 
         return result;
     }
-}
     public void reverseString(char[] s) {
         /**
          * reverseString = leetcode 344
