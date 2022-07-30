@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    // freopen("input.txt","r",stdin);
+    // freopen("input.txt","r",stdin); //stage 
     // freopen("output.txt","w",stdout);
     int t;
     scanf("%d",&t);
