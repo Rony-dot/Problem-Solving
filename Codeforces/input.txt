@@ -1,2 +1,7 @@
-10
-rocesfedoc
+6
+lollipops
+stringology
+abracadabra
+codeforces
+test
+f
