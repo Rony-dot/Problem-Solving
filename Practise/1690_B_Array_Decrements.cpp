@@ -1,7 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    // freopen("input.txt","r",stdin); //home merged with stage
+    //home merged with stage
+    // stage merged with main
+    // freopen("input.txt","r",stdin); 
     // freopen("output.txt","w",stdout);
     int t;
     scanf("%d",&t);
