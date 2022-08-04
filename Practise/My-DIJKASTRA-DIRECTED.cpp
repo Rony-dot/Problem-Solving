@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#define file_read(filename)  freopen("input.txt","r",stdin)
 using namespace std;
 struct node{
     int value, cost;
@@ -53,9 +54,11 @@ void dijkastra(int source){
     }
 }
 int main(){
+    file_read("");
     reset();
     int nodes, edges;
-    cin>>nodes>>edges;
+    int t;
+        cin>>nodes>>edges;
     for(int i=1;i<=edges;i++){
         int u, v, w;
         cin>>u>>v>>w;
@@ -69,7 +72,9 @@ int main(){
         cout<<"value : "<<i<<" -> Distance : ";
         if(dist[i]==INF) cout<<"INFINITY"<<endl;
             else cout<<dist[i]<<endl;
+
     }
+
 }
 /*
 5 6
@@ -80,4 +85,10 @@ int main(){
 4 5 2
 5 3 5
 1
+
+value : 1 -> Distance : 0
+value : 2 -> Distance : 2
+value : 3 -> Distance : 1
+value : 4 -> Distance : 3
+value : 5 -> Distance : 5
 */

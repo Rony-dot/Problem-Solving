@@ -1,4 +1,4 @@
-package introver_extrovert;
+package bs_introver_extrovert;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package city__coupon_discount;
+package bs_city__coupon_discount;
 
 import java.util.*;
 
