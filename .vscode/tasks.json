@@ -3,11 +3,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file",
-<<<<<<< HEAD
-            "command": "C:/Dwimperl/c/bin/g++.exe",
-=======
             "command": "C:\\TDM-GCC-64\\bin\\g++.exe",
->>>>>>> stage
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -16,11 +12,7 @@
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-<<<<<<< HEAD
-                "cwd": "C:/Dwimperl/c/bin"
-=======
                 "cwd": "${fileDirname}"
->>>>>>> stage
             },
             "problemMatcher": [
                 "$gcc"
