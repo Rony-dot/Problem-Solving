@@ -28,10 +28,11 @@ public class Solution {
         Collections.sort(list,Collections.reverseOrder());
         int count = 0;
         int left = total;
+        int half = total+1 >> 1;
         for(int i: list){
             left -= i;
             count ++;
-            if( left <= total/2){
+            if( left <= half){
                 return count;
             }
         }
