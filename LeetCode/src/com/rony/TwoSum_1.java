@@ -1,5 +1,8 @@
 package com.rony;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class TwoSum_1 {
 
 //    Input: nums = [2,7,11,15], target = 9
@@ -16,14 +19,35 @@ public class TwoSum_1 {
         // anonymous array
 //        new int[] {1,2,3}
 
+        TwoSum_1 ts = new TwoSum_1();
+
         int[] nums = {2,7,11, 15};
         int target = 26;
-        MySolution s = new MySolution();
-        int[] results = s.twoSum(nums, target);
+
+        int[] results = ts.twoSum(nums, target);
         System.out.println(results[0]+" , "+results[1]);
+
+        int[] results2 = ts.myTwoSum(nums, target);
+        System.out.println(results2[0]+" , "+results2[1]);
     }
-}
-class MySolution {
+
+    public int[] myTwoSum(int[] nums, int target) {
+
+        Map<Integer,Integer> map = new HashMap<Integer,Integer>();
+        int i=0;
+        for(int n : nums){
+            int diff = target-nums[i];
+            if(map.containsKey(diff)){
+                return new int[] {map.get(diff),i};
+            }
+            map.put(n,i);
+            i++;
+        }
+
+        return new int[2];
+
+    }
+
     public int[] twoSum(int[] nums, int target) {
 
         int[] results = new int[2];
