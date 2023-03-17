@@ -1,4 +1,4 @@
-package com.rony;
+package com.rony.reverse_integer_7_easy;
 
 public class ReverseInteger_7 {
     public static void main(String[] args) {
