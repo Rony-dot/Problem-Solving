@@ -8,9 +8,31 @@ import java.util.Stack;
 public class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        Arrays.stream(solution.nextGreaterElement2(new int[]{4, 1, 2}, new int[]{1, 3, 4, 2})).forEach(System.out::println);
-        Arrays.stream(solution.nextGreaterElement2(new int[]{2,4}, new int[]{1,2,3,4})).forEach(System.out::println);
-        Arrays.stream(solution.nextGreaterElement2(new int[]{1,3,5,2,4}, new int[]{6,5,4,3,2,1,7})).forEach(System.out::println);
+        Arrays.stream(solution.nextGreaterElement3(new int[]{4, 1, 2}, new int[]{1, 3, 4, 2})).forEach(System.out::println);
+        Arrays.stream(solution.nextGreaterElement3(new int[]{2,4}, new int[]{1,2,3,4})).forEach(System.out::println);
+        Arrays.stream(solution.nextGreaterElement3(new int[]{1,3,5,2,4}, new int[]{6,5,4,3,2,1,7})).forEach(System.out::println);
+    }
+
+    public int[] nextGreaterElement3(int[] nums1, int[] nums2){
+        Map<Integer,Integer> maps = new HashMap<>();
+        for(int i=0; i<nums1.length; i++){
+            maps.put(nums1[i],i);
+        }
+        int[] res = new int[nums1.length];
+        Arrays.fill(res,-1);
+        Stack<Integer> stak = new Stack<>();
+
+        for(int i=0; i< nums2.length; i++){
+            int cur = nums2[i];
+            while(!stak.isEmpty() && cur>stak.peek()){
+                int val = stak.pop();
+                int idx = maps.get(val);
+                res[idx] = cur;
+            }
+            if(maps.containsKey(cur)) stak.push(cur);
+        }
+        return res;
+
     }
 
 
